@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Roboto+Slab&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css"> 
+   
+   <title>Document</title>
+
+    
+
+
+</head>
+
+
+
+<body>
+   
+
+    <div class="container">
+
+        <div class="first_cont"> 
+
+                <div class="input_form">
+
+                    <h1>Single-Channel Queue Test</h1>
+
+                        <label for="inp" class="inp">
+                        <input type="text" id="inp" class="input" placeholder="&nbsp;">
+                        <span class="label">Number OF Customer </span>
+                        <span class="border"></span>
+                        </label>
+
+
+                        <div class="button">
+                                <span>CAlCUTE NOW</span>
+                                <svg>
+                                <polyline class="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                                <polyline class="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                            </svg>
+                            </div>
+                </div>
+
+
+
+        </div>
+
+        <div class="second_cont">
+
+        <div class="table cont ">
+            <h1 style="color: burlywood"> Customer Table </h1>
+                <table class="mainTable" style="width: 90%">
+                        <thead>
+                            <tr>
+                                <th> Costomer No </th>
+                                <th> Arrival Time</th>
+                                <th> Service Time </th>
+                                <th> Time service Login  </th>
+                                <th> Time Service End </th>
+                                <th> Time Customer Waits In Queue </th>
+                                <th> Time Customer Spends In System </th>
+                                <th> Idel Time Of Server </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+        </div>
+
+
+        <div class="canvas cont ">
+
+                <h1 style="color: aliceblue"> Visual representation of Customer <br> Getting service  </h1>
+
+            <div class="Chart">
+                    <canvas id="myChart" ></canvas>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+</div>
+
+
+    <!-- <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js" 
+    integrity="sha256-qSIshlknROr4J8GMHRlW3fGKrPki733tLq+qeMCR05Q=" 
+    crossorigin="anonymous">
+    </script> -->
+
+    <script src="./chart/chart.bundle.js"></script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
