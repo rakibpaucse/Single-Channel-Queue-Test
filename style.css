@@ -1,5 +1,5 @@
 * {
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -41,13 +41,22 @@ font-family: 'Abel', sans-serif;
 /* table */
 .table{
     background-color: #2f2d29;
+    padding-bottom: 20px;
+    height: auto;
 }
 
 
 .mainTable {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     border-collapse: collapse;
     width: 100%;
+
+
+
+        overflow-y:scroll;
+        /* height:450px; */
+        display:block;
+    
   }
   
   .mainTable td, .mainTable th {
@@ -74,6 +83,7 @@ font-family: 'Abel', sans-serif;
 /* canvas */
 .canvas{
     background-color: #1f7c49;
+    height: auto;
 }
 
 
@@ -110,8 +120,6 @@ h1{
 
 
 
-
-/* animation */
 
 
 
@@ -269,6 +277,8 @@ h1{
 
 
 
+/* animation */
+
 
 
 
@@ -277,6 +287,10 @@ h1{
 }
 
 .fadein {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
 	        animation: all 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 

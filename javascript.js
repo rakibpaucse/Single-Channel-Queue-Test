@@ -1,4 +1,4 @@
-var customer = 5 ;
+var customer ;
 
 
 document.querySelector('.button').addEventListener('click', function(e){
@@ -16,7 +16,11 @@ document.querySelector('.button').addEventListener('click', function(e){
     document.querySelector('.second_cont').style.display = 'block';
 
 
+//  maintain table height
 
+
+ customer > 15 ? document.querySelector('.mainTable').style.height = '450px' : 
+                 document.querySelector('.mainTable').style.height = 'inherit';
 
 
 
@@ -40,9 +44,6 @@ for(let i = 0 ; i<customer ; i++){
 } 
 
 
-function addElement(arr){
-    return arr.reduce((a, b) => a + b, 0);
-}
 arrivalTime.sort();
 
 for (let i = 0; i < customer; i++) {
@@ -71,6 +72,7 @@ for (let i = 0; i < customer; i++) {
 
 }
 
+
 var test = [];
 var final = [];
 let q = 0;
@@ -92,10 +94,6 @@ while(1){
 
         q++;
     }
-
-
-
-
 
 
 
@@ -164,24 +162,6 @@ document.querySelector('.mainTable tbody').innerHTML = tableContent;
 
 
 
-
-
-
-
-
-
-var randomColorArray = [];
-
-function colorGen() {   
-    var col1=Math.floor(Math.random() * 255) + 1;
-    var col2=Math.floor(Math.random() * 255) + 1;
-    var col3=Math.floor(Math.random() * 255) + 1;
-    return 'rgba('+ col1
-     + ',' +  col2
-    +',' + col3 +',';
-  }
-
-
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -193,25 +173,8 @@ var myChart = new Chart(ctx, {
             data: [...final , 0] ,  
 
 
-            backgroundColor:
-            // serviceTime.map(()=> 
-            //     {
-            //         var color = colorGen();
-            //         randomColorArray.push(color);
-            //         return color+0.3+')';
-            //     })   
-            
-            ''
-            ,
-
-            borderColor: 
-
-                // randomColorArray.map((col)=>{
-                //     return col+1+')';
-                // })
-
-                'green'
-            ,
+            backgroundColor:  '',
+            borderColor: 'green',
             borderWidth: 2
         }]
     },
