@@ -195,6 +195,20 @@ var myChart = new Chart(ctx, {
 });
 
 
+function addElement(arr){
+    return arr.reduce((a, b) => a + b, 0);
+}
+
+
+let avgWaitingTime  =  (addElement(timeCustomerWaitsInQueue) / customer).toFixed(2);
+let avgServicetime = (addElement(serviceTime) / customer).toFixed(2);
+
+
+
+document.querySelector(".avgWaitingTime").innerHTML="Average Waiting Time : "+addElement(timeCustomerWaitsInQueue)+"/"+customer+" = "+avgWaitingTime;
+document.querySelector(".avgServicetime").innerHTML="Average Service TIme : "+addElement(serviceTime)+"/"+customer+" = "+avgServicetime;
+
+
 
 
 document.querySelector('.input').value  = '';
