@@ -80,7 +80,7 @@ let q = 0;
 while(1){
 
     for(let i = 0 ; i<arrivalTime.length ; i++){
-        if( q == arrivalTime[i]){
+        if( q == arrivalTime[i]){  
             test.push(arrivalTime[i] + serviceTime[i]);
         }
     }
@@ -90,7 +90,9 @@ while(1){
         test = test.map(val=> --val) 
         test = test.filter(val => val!=0)
         
-        if(!test.length) break;
+        if(!test.length && (final.length > customer)){ 
+        	break;
+        } 
 
         q++;
     }
@@ -133,7 +135,6 @@ arrivalTime.forEach((content , index) => {
         timeCustomerSpendsInSystem[index]
         +'</td><td>'+
         IdelTimeOfServer[index]
-
         +'</td></tr>'
         );
         
